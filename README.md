@@ -26,6 +26,19 @@ The release versions of CMAQ that are currently available on Git Hub include:
 * [v5.0   (February 2012)](https://github.com/USEPA/CMAQ/tree/5.0)
 * [v4.7.1 (June 2010)](https://github.com/USEPA/CMAQ/tree/4.7.1)
 
+
+The release versions of CMAQ that are currently available on Git Hub include:
+ 
+* [v5.2 (June 2017)](https://github.com/USEPA/CMAQ/tree/5.2) - [doi:10.5281/zenodo.1167892](https://zenodo.org/record/1167892) 
+   
+   [User Manual](https://github.com/USEPA/CMAQ/blob/5.2/DOCS/User_Manual/README.md) | [Known Issues](https://github.com/USEPA/CMAQ/blob/5.2/DOCS/Known_Issues/README.md) | [Release Notes](https://github.com/USEPA/CMAQ/blob/5.2/CCTM/docs/Release_Notes/README.md) | [Tutorials](https://github.com/USEPA/CMAQ/tree/5.2/DOCS/Tutorials) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1167892.svg)](https://doi.org/10.5281/zenodo.1167892)
+* [v5.1   (December 2015)](https://github.com/USEPA/CMAQ/tree/5.1) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1079909.svg)](https://doi.org/10.5281/zenodo.1079909)
+* [v5.0.2 (April 2014)](https://github.com/USEPA/CMAQ/tree/5.0.2) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1079898.svg)](https://doi.org/10.5281/zenodo.1079898)
+* [v5.0.1 (July 2012)](https://github.com/USEPA/CMAQ/tree/5.0.1)
+* [v5.0   (February 2012)](https://github.com/USEPA/CMAQ/tree/5.0) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1079888.svg)](https://doi.org/10.5281/zenodo.1079888)
+* [v4.7.1 (June 2010)](https://github.com/USEPA/CMAQ/tree/4.7.1) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1079879.svg)](https://doi.org/10.5281/zenodo.1079879)
+
+
 ### Benchmark Data
 Benchmark/tutorial input and output data for each CMAQ release version are available from the CMAS Center Software Clearinghouse. Go to http://www.cmascenter.org, select Download -> Software -> CMAQ and choose the version to get the tutorial data.  
 
