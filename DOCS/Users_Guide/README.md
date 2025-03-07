@@ -7,8 +7,6 @@ Note: While this User's Guide is packaged with the code when it is downloaded or
 
 ## Table of Contents
 
-[CMAQ Tutorials:](Tutorials/README.md) A series of short tutorials provide practical examples of how to set up and run CMAQ. 
-
 [Chapter 1 (Overview):](CMAQ_UG_ch01_overview.md) CMAQ background, features, requirements and support resources.
 
 [Chapter 2 (Program Structure):](CMAQ_UG_ch02_program_structure.md) Overview of the programs included with the CMAQ system.
