@@ -17,13 +17,13 @@ The information contained here should be read prior to starting a project with t
 # Summary of Developer Workflow
 The public CMAQ release repository is located on GitHub (<https://github.com/USEPA/CMAQ>). Users should refer to this repository for bug fixes, issues, documentation and major releases for CMAQ. Users can use the watch and star buttons on the public CMAQ release repository page to be notified of updates and changes. Developers interested in submitting code changes should read this Developer Guide and then contact the EPA CMAQ development team as soon as possible to discuss their motivation and plans for submitting a code change (CMAQ_Team@epa.gov).  
 
-In order to facilitate incorporation of a contribution, developers should follow the instructions on code requirements and repository layout as described in the [code management instructions](Code_Management.md).  Documentation of the assumptions and results of the new code is a very important part of a meaningful code submission. If the submission involves a detailed new feature, developers are encouraged to publish the use of their feature in a peer-reviewed journal before submission. 
+Documentation of the assumptions and results of the new code is a very important part of a meaningful code submission. If the submission involves a detailed new feature, developers are encouraged to publish the use of their feature in a peer-reviewed journal before submission. 
 
-To begin, the developer should fork the public CMAQ release repository within GitHub. This will create a copy of the public CMAQ release repository under your name (https://github.com/{user_name}/CMAQ). Developers should use standard git commands to clone the appropriate version branch (5.3, 5.2.1, 5.2, ..) from your forked repository to your local machine and then to create a new feature or bug fix branch. Developers will add, commit and push changes to their new feature or bug fix branch on their forked repository, not to the public release version of the repository.  
+To begin, the developer should fork the public CMAQ release repository within GitHub. This will create a copy of the public CMAQ release repository under your name (https://github.com/{user_name}/CMAQ). Developers should use standard git commands to clone the appropriate version branch from your forked repository to your local machine and then to create a new feature or bug fix branch. Developers will add, commit and push changes to their new feature or bug fix branch on their forked repository, not to the public release version of the repository.  
 
 Once a feature or bug fix branch meets requirements for code consistency, benchmark testing, model output evaluation, and documentation including release notes, the developer may submit a pull request from their local feature or bug fix branch of their fork of the CMAQ repository on Github to the CMAQ public repository. This process is described in the Nuts and Bolts section below, and in the following [tutorial](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github), which also provides instructions on how to keep a fork up to date with changes on the public release repository.  
 
-Contributions will undergo a thorough code review wi EPA before being incorporated in the next model release. Depending on the size, scope, and importance of the contribution, the CMAQ development team may or may not agree to support the update through future releases. Decisions regarding ongoing support will be made on a case-by-case basis with input from the developer who submits the contribution. 
+Contributions will undergo a thorough code review by EPA before being incorporated in the next model release. Depending on the size, scope, and importance of the contribution, the CMAQ development team may or may not agree to support the update through future releases. Decisions regarding ongoing support will be made on a case-by-case basis with input from the developer who submits the contribution. 
 The following sections outline the CMAQ code development and review process in greater detail.
 
 
@@ -59,20 +59,8 @@ Developers should run and test their contribution before submitting the pull req
 ## Code Review
 CMAQ Developers at EPA will review all code submissions in order to ensure code stability and consistency, and prevent degradation of model performance. After review, the EPA team will either accept the submission, recommend specific improvements to the submission, or in some cases reject the submission. To avoid outright rejection, we urge developers to contact the EPA team early in the development process and maintain contact throughout to help ensure the submission is compatible with the CMAQ code base and is a robust addition.  
 
-### Code Consistency
-Please refer to the [code management instructions](Code_Management.md). 
-Examples of small, but important guidelines include:
-
-- Eliminate global memory references (across modules). In other words, no common blocks across modules, no hidden data paths, and no "back doors."
-- All subroutines should be named in a manner which prevents namespace conflicts.
-- In general, variable names should be self-descriptive (e.g. NCELLS rather than N).
-- Use the Fortran declaration IMPLICIT NONE to maintain some control on typographic errors and undefined variables. The use of IMPLICIT NONE forces the developer to declare all internal variables. This is standard in Fortran 90.
-- In general, it is expected that MKS units are used for input and output variables, as these units have been standardized throughout the CMAQ system. If you use alternative units, please document this exhaustively.
-
 ### Benchmark Testing
-Dataset: The U.S. EPA Southeast US 12km domain July 1-14, 2016 testing dataset is provided with the CMAQv5.3 Release. This dataset is distributed for benchmarking and testing the model installation. It is available from CMAS; please go to https://www.epa.gov/cmaq/cmaq-inputs-and-test-case-data for instructions on how to download the test dataset.
-
-Before making code changes, developers should test multiple compilers (if they have access to them; see the following section on **Compiler Tests**), multiple processor configurations, and single processor configuration runs for a single simulation day to verify their results match the previous stable release, and/or that their results are computationally and physically reasonable. After implementing their code changes, developers should repeat these tests and share the results as part of the pull request documentation.
+ [Benchmark tutorials](../Users_Guide/Tutorials/README.md) and reference datasets are available for benchmarking and testing the model installation. Before making code changes, developers should test multiple compilers (if they have access to them; see the following section on **Compiler Tests**), multiple processor configurations, and single processor configuration runs for a single simulation day to verify their results match the previous stable release, and/or that their results are computationally and physically reasonable. After implementing their code changes, developers should repeat these tests and share the results as part of the pull request documentation.
 
 #### Compiler Tests  
 Compiler tests use the default benchmark configuration with different compilers and MPI configurations. It is important for the user community that CMAQ always compile with Intel Fortran, Gnu Fortran and Portland Group Fortran compilers. If a developer has access to more than one compiler, it is critical that they test all of them. Some errors will cause different behaviors depending on the choice of compiler and may not be detectable with all of the compilers. See appendix 1 for an example of a Compiler Test.  
@@ -91,7 +79,7 @@ Documentation is of course an integral part of the integration of any contributi
 -   If the contribution is a new feature, developers are encouraged to publish its use in a peer-reviewed journal before submitting it to the CMAQ Public Repository.  
 
 *CMAQ Documentation Resources:*  
-Documentation for CMAQv5.3 is available at https://github.com/USEPA/CMAQ/tree/main/DOCS. Materials include:
+Documentation for CMAQ is available at https://github.com/USEPA/CMAQ/tree/main/DOCS. Materials include:
 -   User Guide which describes code structure and regular operation of the model.
 -   Release Notes describing code improvements relevant for this model release. 
 -   Tutorials that give specific instructions for common tasks like running CMAQ or adding chemical tracers.
@@ -102,7 +90,6 @@ Depending on the size, scope, and importance of the contribution, the CMAQ devel
 # Copyright Information
 Contact EPA (CMAQ_Team@epa.gov) with questions and concerns.
 
-CMAQ Developer Guide (c) 2019
 
 # Appendix
 ## Appendix 1: Compiler Tests
