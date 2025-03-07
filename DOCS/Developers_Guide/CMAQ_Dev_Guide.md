@@ -1,6 +1,5 @@
 **Developers' Guide for the Community Multiscale Air Quality (CMAQ) Modeling System**
 =
-**Consistent with CMAQ model version 5.3 (2019 Release)**
 
 Prepared in cooperation with the:  
 &nbsp;&nbsp;&nbsp; ***Community Modeling and Analysis System***  
@@ -13,7 +12,7 @@ The information in this Developer Guide has been funded wholly or in part by the
 
 # Motivation
 The evolution and robustness of CMAQ depends on contributions from the vibrant CMAS community. The development team at EPA is excited to work with potential contributors and integrate community submissions into the CMAQ code base. In order to facilitate this process, we describe in this document our development process and how external developers may submit new code features.  
-The information contained here should be read prior to starting a project within the CMAQ framework. Instructions are tailored for external developers but can also be used by developers in the CMAS-Center or within EPA.  
+The information contained here should be read prior to starting a project with the CMAQ framework. Instructions are tailored for external developers but can also be used by developers in the CMAS-Center or within the EPA.  
 
 # Summary of Developer Workflow
 The public CMAQ release repository is located on GitHub (<https://github.com/USEPA/CMAQ>). Users should refer to this repository for bug fixes, issues, documentation and major releases for CMAQ. Users can use the watch and star buttons on the public CMAQ release repository page to be notified of updates and changes. Developers interested in submitting code changes should read this Developer Guide and then contact the EPA CMAQ development team as soon as possible to discuss their motivation and plans for submitting a code change (CMAQ_Team@epa.gov).  
@@ -24,7 +23,7 @@ To begin, the developer should fork the public CMAQ release repository within Gi
 
 Once a feature or bug fix branch meets requirements for code consistency, benchmark testing, model output evaluation, and documentation including release notes, the developer may submit a pull request from their local feature or bug fix branch of their fork of the CMAQ repository on Github to the CMAQ public repository. This process is described in the Nuts and Bolts section below, and in the following [tutorial](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github), which also provides instructions on how to keep a fork up to date with changes on the public release repository.  
 
-Contributions will undergo a thorough code review within EPA before being incorporated in the next model release. Depending on the size, scope, and importance of the contribution, the CMAQ development team may or may not agree to support the update through future releases. Decisions regarding ongoing support will be made on a case-by-case basis with input from the developer who submits the contribution. 
+Contributions will undergo a thorough code review wi EPA before being incorporated in the next model release. Depending on the size, scope, and importance of the contribution, the CMAQ development team may or may not agree to support the update through future releases. Decisions regarding ongoing support will be made on a case-by-case basis with input from the developer who submits the contribution. 
 The following sections outline the CMAQ code development and review process in greater detail.
 
 
@@ -34,29 +33,7 @@ The following sections outline the CMAQ code development and review process in g
 
 CMAQ uses a number versioning system for each release version branch, with major and minor increments. For example, in the case of hypothetical version 14.0 the first number (major version) and second number (minor version) refer to a stable release version. The minor version (second number) of CMAQ increments when one or many new science developments have been adopted. 
 Although these changes may significantly affect model results, the model will still be generally compatible with inputs developed for versions of the same major number. The major version (first number) of CMAQ increments when significant development changes to the code base have been adopted such that backward compatibility or comparability is no longer expected. Modifications to the publically released version without increment are prohibited in order to ensure consistency among published literature referring to a particular model version. 
-In between published releases the development team may publish solutions to model bugs and issues in the public repository under the folder [DOCS/Known_Issues](https://github.com/lizadams/CMAQ/tree/main/DOCS/Known_Issues). The README located in this folder describes existing known issues, their scope and impact, and how they may be solved.
-
-## Development Versions
-
-Prior to the public release of each major CMAQ version, the unofficial source code is released to the public as a development version that is not intended for regulatory or research application use. The purpose of releasing the development version to the public is to give community members:
-
-- a reasonable amount of time to complete any pending feature submissions they would like to submit for the stable release.
-- a role in helping to test, troubleshoot, and debug the unofficial code before the stable release.
-- an opportunity to comment on the code improvements made in the new version.
-- the ability to take advantage of improvements for preliminary studies of their own interest.
-- a reasonable amount of time to ensure the new version is compatible with any features the member may have submitted in the past.
-
-The unofficial (or ***beta***) version of the code will first be vetted internally and then released generally 6 months in advance of the corresponding stable CMAQ release; this period is known as the *beta-phase*. At this time, EPA will announce the deadline for community contributions. This deadline will be chosen in order to balance both the time needed by developers to submit their contributions and the time needed by EPA to incorporate submissions before public release. Version numbering for the beta series will append the letter 'b' and an incrementing number to the expected version number of the stable release. The number of beta versions is variable among releases. For example, before the hypothetical release of CMAQv14.3 the following series of version numbers could be expected:  
-
-	v14.3.b0  (First tested internal EPA version)  
-	v14.3.b1  (Release to public after minor changes)  
-	v14.3.b2  (....incremental testing, ....)  
-	v14.3.b3  (....bug squashing, and  ...)  
-	v14.3.b4  (....documentation updates...)  
-	v14.3     (Stable Public Release)  
-
-As stated previously, the “Known Issues” section of the documentation will be continually updated as problems are identified in the released code-base. These updates will not be implemented in the default model code and so the version numbering will in general, not increment between public releases. The instrumented versions of the code (e.g. DDM, ISAM, STM, etc) should be released with the stable version.
-
+In between major releases the development team may release bug fixes and new features on the '+' branch.  Further information on bugfix versions of CMAQ can be found [here](../CMAQ-Bugfix-Branch.md).
 
 # Making Contributions
 ## Get in touch
